@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Songify</title>
+    <link rel="icon" href="images/images.png">
+    <link rel="stylesheet" type="text/css" href="font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel|Great+Vibes|Italianno|Arima+Madurai" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="welcome-screen">
+            <h1> Songify... </h1>
+            <span>feel the music</span>
+            <h3> Enter the name to access your account </h3>
+            <div class="input-wrapper">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Name" id="name-input">
+                <button>  <i class="fa fa-music" aria-hidden="true"></i></button>
+              </div>
+              <span id="helpBlock" class="help-block"></span>
+            </div>
+        </section>
+        <div class="main hidden">
+            <header>
+                  <div class="logo">
+                    <h1> Songify... </h1>
+                    <span>feel the music</span>
+                    <div>
+                <div class="right floated user-name">
+                 </div>
+            </header>
+
+            <div class="label"><span>Effects</span></div>
+            <div class="effects hidden">
+              <div id="back"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
+              <button id="wahwah" class="icon">WahWah</button>
+              <button id="cabinet" class="icon">Echo</button>
+              <button id="convolver" class="icon">Convolver</button>
+              <div>
+                <button id="overdrive" class="icon">Overdrive</button>
+                <button id="compressor" class="icon">Vibrations</button>
+              </div>
+            </div>
+            <section class="content">
+                <audio src="songs/song9.mp3"></audio>
+                <table id="songs">
+                  <div id="#music">
+                    <img src="images/images.png" id="musicimg">
+                      <span id="playlist">Top Songs 2017-16</span>
+                    <button class="tableicon" id="playall" title="Play All">
+                      <i class="fa fa-play clickable play-icon" aria-hidden="true"></i>
+                        <span>&nbspPlay All<span>
+                    </button>
+                    <button class="tableicon fileUpload" id="addfile" title="Add your file">
+                      <i class="fa fa-plus" aria-hidden="true"></i>
+                        <input type="file" id="upload" accept="audio/*" value="">
+                    </button>
+                      <p id="demo" class=""></p>
+                    </div>
+                    <thead class="list-headers">
+                      <tr>
+                          <td> Title </td>
+                          <td> Artist </td>
+                          <td> Album </td>
+                          <td> Duration </td>
+                        </tr>
+                    </thead>
+                    <!-- <div class="song-list"> -->
+                    <tbody>
+                      <tr id="song1" class="song">
+                          <td class="song-name"></td>
+                          <td class="song-artist"></td>
+                          <td class="song-album"></td>
+                          <td class="song-length"></td>
+                      </tr>
+                      <tr id="song2" class="song">
+                          <td class="song-name"></td>
+                          <td class="song-artist"></td>
+                          <td class="song-album"></td>
+                          <td class="song-length"></td>
+                      </tr>
+                      <tr id="song3" class="song">
+                          <td class="song-name"></td>
+                          <td class="song-artist"></td>
+                          <td class="song-album"></td>
+                          <td class="song-length"></td>
+                      </tr>
+                      <tr id="song4" class="song">
+                          <td class="song-name"></td>
+                          <td class="song-artist"></td>
+                          <td class="song-album"></td>
+                          <td class="song-length"></td>
+                      </tr>
+                      <tr id="song5" class="song">
+                          <td class="song-name"></td>
+                          <td class="song-artist"></td>
+                          <td class="song-album"></td>
+                          <td class="song-length"></td>
+                      </tr>
+                      <tr id="song6" class="song">
+                          <td class="song-name"></td>
+                          <td class="song-artist"></td>
+                          <td class="song-album"></td>
+                          <td class="song-length"></td>
+                      </tr>
+                      <tr id="song7" class="song">
+                          <td class="song-name"></td>
+                          <td class="song-artist"></td>
+                          <td class="song-album"></td>
+                          <td class="song-length"></td>
+                      </tr>
+                      <tr id="song8" class="song">
+                          <td class="song-name"></td>
+                          <td class="song-artist"></td>
+                          <td class="song-album"></td>
+                          <td class="song-length"></td>
+                      </tr>
+                      <tr id="song9" class="song">
+                          <td class="song-name"></td>
+                          <td class="song-artist"></td>
+                          <td class="song-album"></td>
+                          <td class="song-length"></td>
+                      </tr>
+                      <tr id="song10" class="song">
+                          <td class="song-name"></td>
+                          <td class="song-artist"></td>
+                          <td class="song-album"></td>
+                          <td class="song-length"></td>
+                      </tr>
+                      <tr id="song11" class="song">
+                          <td class="song-name"></td>
+                          <td class="song-artist"></td>
+                          <td class="song-album"></td>
+                          <td class="song-length"></td>
+                      </tr><tr id="song12" class="song">
+                          <td class="song-name"></td>
+                          <td class="song-artist"></td>
+                          <td class="song-album"></td>
+                          <td class="song-length"></td>
+                      </tr>
+                    </tbody>
+                    <!-- </div> -->
+                </table>
+            </section>
+            <footer>
+                <div class="current-song-wrapper">
+                  <img src="" class="current-song-image">
+                  <div>
+                    <p class="current-song-name"></p>
+                    <p class="current-song-album"></p>
+                  </div>
+                </div>
+                <div class="controls">
+                    <div class="player-buttons">
+                       <i class="fa fa-random disabled clickable" aria-hidden="true" title="Shuffle"></i>
+                       <i class="fa fa-step-backward clickable disabled" aria-hidden="true" title="Previous Song"></i>
+                       <i class="fa fa-play clickable play-icon" aria-hidden="true" ></i>
+                       <i class="fa fa-step-forward clickable disabled" aria-hidden="true" title="Next Song"></i>
+                       <i class="fa fa-repeat disabled clickable" aria-hidden="true" title="Repeat All"></i>
+                    </div>
+                      <div class="progress-wrapper">
+                          <span class="time-elapsed"> </span>
+                          <div class="player-progress clickable">
+                            <div class="progress-filled"> </div>
+                          </div>
+                          <span class="song-duration"></span>
+                      </div>
+                      <div class="controls_2 ">
+                        <i class="fa favolume clickable disabled fa-volume-up" aria-hidden="true" style="font-size:22px;"></i>
+                        <input type="range" onchange="setVolume()" class="clickable hidden" id='volume1' min="0" max="1" step="0.01" value="1">
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="jquery.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tunajs/1.0.0/tuna-min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
